@@ -1,0 +1,996 @@
+@font-face {
+    font-family: 'Titillium Web Regular';
+    src: url(./assets/fonts/TitilliumWeb-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Titillium Web Bold';
+    src: url(./assets/fonts/TitilliumWeb-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Titillium Web SemiBold';
+    src: url(./assets/fonts/TitilliumWeb-Bold.ttf) format('truetype');
+     font-weight: 600;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Malaga RegItalic';
+    src: url(./assets/fonts/MalagaOT-RegItalic.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url(./assets/fonts/MyriadPro-Regular.woff) format('woff');
+    src: url(./assets/fonts/MyriadPro-Regular.ttf) format('truetype'), url(./assets/fonts/MyriadProRegular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.grid {
+    display: grid;
+}
+
+body {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.main-header {
+    position: relative;
+    min-height: 900px;
+    background-image: url(./assets/images/header_background.png);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.9fr 2fr;
+}
+
+.navigation-section {
+    grid-template-columns: 1.1fr 1fr;
+    grid-column: 3/5;
+}
+
+.navigation-conteiner {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    height: 190px;
+}
+
+.navigation-item a {
+    color: #454545;
+    font-size: 1rem;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+}
+
+.navigation-item a:hover {
+    color: #242323;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+.navigation-conteiner li:nth-child(1), .navigation-conteiner li:nth-child(2) {
+    justify-self: end;
+}
+
+.navigation-conteiner li:nth-child(3) {
+    justify-self: center;
+}
+
+.navigation-conteiner.enter {
+    position: relative;
+    left: 4%;
+    width: max-content;
+    grid-template-columns: repeat(2, 2fr);
+    z-index: 1;
+}
+
+.navigation-item.login-button a {
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+}
+
+.navigation-item.signup-button a {
+    position: relative;
+    top: 1%;
+    left: 22%;
+    padding: 8px 22px 11px;
+    font-size: 1rem;
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 23px;
+    background: linear-gradient(to top left, #6275cb, #582c7e);
+}
+
+.signup-button a {
+    -webkit-box-shadow: -3px 9px 24px 1px #6e7eb8;
+    -moz-box-shadow: -3px 9px 24px 1px #6e7eb8;
+    box-shadow: -3px 9px 24px 1px #6e7eb8;
+}
+
+.navigation-conteiner .navigation-item {
+    text-align: center;
+    justify-self: start;
+}
+
+.neutron {
+    position: relative;
+    left: 200px;
+    top: 73px;
+    font-size: 1.875rem;
+    font-family: 'Titillium Web SemiBold', 'Myriad Pro Regular', sans-serif;
+    font-weight: 300;
+    color: #858688;
+}
+
+.neutron span {
+    font-size: 1.875rem;
+    color: #5b4295;
+}
+
+.navigation-row-left {
+    grid-template-columns: 1.35fr 2fr;
+}
+
+.language-container {
+    position: relative;
+    left: 4%;
+    width: max-content;
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.language-container li+li:before {
+    content: "/";
+    padding-left: 7px;
+    padding-right: 6px;
+}
+
+.language-item {
+    text-align: left;
+}
+
+.language-item:nth-child(2n) {
+    text-align: center;
+}
+
+.language-item:first-child {
+    padding-left: 9px;
+}
+
+.language-item a {
+    font-size: 0.875rem;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    color: #b1b1b1;
+}
+
+.language-item a:hover {
+    color: #959595;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+.main-text {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1.7fr 1fr;
+    grid-column: 1/5;
+    grid-row: 2;
+    height: max-content;
+}
+
+h1 {
+    position: relative;
+    bottom: -17px;
+    grid-row: 1;
+    font-family: 'Titillium Web SemiBold', 'Myriad Pro Regular', sans-serif;
+    font-weight: 300;
+    font-size: 3.8rem;
+    text-align: center;
+    grid-column: 1/4;
+    align-self: end;
+    color: #5f5f5f;
+}
+
+.main-subtitle {
+    position: relative;
+    bottom: -7px;
+    left: -2px;
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 2.35rem;
+    letter-spacing: -0.1px;
+    color: #7a7a79;
+}
+
+.main-subtitle span {
+    font-size: 2.2rem;
+    font-family: 'Titillium Web SemiBold', 'Myriad Pro Regular', sans-serif;
+    color: #fc6c6e;
+}
+
+.social-icons {
+    position: fixed;
+    top: 32.3%;
+    right: 2%;
+    grid-column: 3;
+    grid-row-gap: 15px;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: right;
+}
+
+.social-icons .fab {
+    color: #676766;
+    background-color: #fff;
+}
+
+.fa-google-plus-square:hover {
+    background-color: #d84830;
+    opacity: 1;
+    color: #fff;
+}
+
+.fa-twitter-square:hover {
+    background-color: #1da1f3;
+    opacity: 1;
+    color: #fff;
+}
+
+.fa-facebook-square:hover {
+    background-color: blue;
+    color: #fff;
+    opacity: 1;
+}
+
+.header-button {
+    position: relative;
+    right: 7%;
+    bottom: -14%;
+    display: grid;
+    grid-template-columns: 0.95fr 0.5fr 1fr;
+    grid-gap: 23px;
+    grid-row: 2;
+    grid-column: 2;
+    align-self: end;
+}
+
+.header-button::before {
+    content: " ";
+    width: 100px;
+    height: 0;
+    -webkit-box-shadow: -3px 9px 24px 1px #6e7eb8;
+    -moz-box-shadow: -3px 9px 24px 1px #6e7eb8;
+    box-shadow: -3px 9px 24px 1px #6e7eb8;
+}
+
+.button-creat {
+    position: relative;
+    top: 6px;
+    width: 249px;
+    height: 56px;
+    padding: 13px 65px;
+    border-radius: 31px;
+    background-color: #5b5e9a;
+    background: linear-gradient(to right, #646c92, #5f2f6a);
+    grid-column: 2 /3;
+}
+
+.button-creat a {
+    font-size: 18px;
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    color: #fff;
+}
+
+.button-creat a:hover { 
+    font-weight: 600;
+    color: #efd5fc;
+    text-decoration-line: underline;
+}
+
+.button-creat {
+    -webkit-box-shadow: 0px 13px 20px 5px #6e7eb8;
+    -moz-box-shadow: 0px 13px 20px 5px #6e7eb8;
+    box-shadow: 0px 13px 20px 5px #6e7eb8;
+}
+
+.fa-apple {
+    padding: 12px 15px;
+    color: #fff;
+    background-color: #724a81;
+    border-radius: 100%;
+    -webkit-box-shadow: 41px 7px 29px -3px #6e7eb8;
+    -moz-box-shadow: 41px 7px 29px -3px #6e7eb8;
+    box-shadow: 41px 7px 29px -3px #6e7eb8;
+}
+
+.fa-google-play {
+    padding: 12px 13px 12px;
+    color: #fff;
+    background-color: #724a81;
+    border-radius: 100%;
+    -webkit-box-shadow: 29px 0px 37px -3px #6e7eb8;
+    -moz-box-shadow: 29px 0px 37px -3px #6e7eb8;
+    box-shadow: 29px 0px 37px -3px #6e7eb8;
+}
+
+.button-apple {
+    grid-column: 3/4;
+    grid-row: 1;
+    align-self: end;
+}
+
+.fa-apple:hover {
+    color: #efd5fc;
+}
+
+.fa-google-play:hover {
+    color: #efd5fc;
+}
+
+.button-android {
+    grid-column: 3/4;
+    grid-row: 1;
+    padding-top: 10px;
+    padding-left: 68px;
+    text-align: left;
+    align-self: center;
+}
+
+.main {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    background-image: url(./assets/images/devices.png), linear-gradient(-6.5deg, #fff 0%, #efefef 47%, #f8f8f8 45%, #fff 45%);
+    background-repeat: no-repeat;
+    background-position-x: 78%;
+    background-position-y: 67.5%;
+}
+
+.security {
+    position: relative;
+    padding-left: 6px;
+    grid-column: 1 / 4;
+    grid-template-columns: 2.1fr 3fr 3fr 3fr 1.5fr;
+    grid-template-rows: repeat(2, 2fr);
+    grid-column-gap: 58px;
+    grid-row-gap: 17px;
+}
+
+.security-main {
+    grid-row: 2;
+    grid-column: 2 / 4;
+    padding-right: 27px;
+    padding-top: 4px;
+    text-align: right;
+}
+
+.security-privacy {
+    position: relative;
+    top: 2%;
+    right: 1%;
+    grid-row: 1;
+    grid-column: 2/ 3;
+}
+
+.security-privacy h3 {
+    position: relative;
+    left: 16%;
+    bottom: 26%;
+    word-spacing: 4px;
+}
+
+.security-privacy::before {
+    position: relative;
+    left: -13px;
+    top: 1px;
+    content: url(./assets/images/iconPrivacy.png);
+}
+
+.security-encryption {
+    position: relative;
+    left: 1.5%;
+    grid-row: 1;
+    grid-column: 3 / 4;
+    z-index: 1;
+}
+
+.security-encryption h3 {
+    position: relative;
+    left: 16%;
+    bottom: 26%;
+    word-spacing: 4px;
+}
+
+.security-encryption::before {
+    content: url(./assets/images/iconEncript.png);
+    position: relative;
+    left: -27px;
+}
+
+.security-email {
+    position: relative;
+    top: 5%;
+    left: 3%;
+    grid-row: 1;
+    grid-column: 4 / 5;
+}
+
+.horizontal-email {
+    position: relative;
+    left: 111%;
+    bottom: 22%;
+    width: 52%;
+    height: 1px;
+    color: #b9b9b9;
+    background-color: #b9b9b9;
+}
+
+.security-email h3 {
+    position: relative;
+    left: 16%;
+    bottom: 26%;
+    word-spacing: 4px;
+}
+
+.security-email::before {
+    content: url(./assets/images/iconEmail.png);
+    position: relative;
+    left: -14px;
+    top: -3px;
+}
+
+.security-about {
+    position: relative;
+    bottom: 82px;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #959393;
+}
+
+.security-title {
+    font-size: 30px;
+    color: #555555;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+}
+
+.security-subtitle {
+    position: relative;
+    bottom: 83px;
+    left: 57px;
+    margin-bottom: 25px;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 1.2rem;
+    color: #959393;
+}
+
+h2 {
+    font-size: 60px;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    color: #535353;
+}
+
+.security-info {
+    padding-left: 48px;
+    font-size: 1.5rem;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    word-spacing: 1.8px;
+    line-height: 1;
+    color: #959393;
+}
+
+.security-info span {
+    font-size: 24px;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    color: #fc6c6e;
+}
+
+.security-main a:hover {
+    color: #242323;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+.security-main a {
+    position: relative;
+    top: 42px;
+    left: 206px;
+    padding: 17px 35px;
+    font-size: 1rem;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    border: 1px solid #b9b9b9;
+    border-radius: 45px;
+    color: #666;
+}
+
+.security-main:after {
+    content: '';
+    position: relative;
+    right: 42%;
+    top: 12%;
+    display: block;
+    height: 1px;
+    width: 125.5%;
+    background: #b9b9b9;
+}
+
+.security-privacy:after {
+    content: '';
+    position: relative;
+    left: 105.5%;
+    bottom: 134%;
+    display: block;
+    height: 76.5%;
+    width: 1px;
+    background: #b9b9b9;
+}
+
+.security-email:after {
+    content: '';
+    position: relative;
+    right: 13.5%;
+    bottom: 94%;
+    display: block;
+    height: 159.5%;
+    width: 1px;
+    background: #b9b9b9;
+}
+
+.blog {
+    grid-template-columns: 1fr 3fr;
+}
+
+.journal {
+    position: relative;
+    bottom: -1%;
+    left: 2.1%;
+    grid-row: 1;
+    grid-column: 1 /2;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+}
+
+.slider-wrap {
+    position: relative;
+    top: 31%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-row: 1;
+    align-self: center;
+    grid-column: 1;
+    word-spacing: 1px;
+}
+
+.slider-comments {
+    grid-column: 2;
+}
+
+.slider-wrap>input {
+    display: none;
+}
+
+.comment-one { 
+    font-size: 1.5rem;
+    font-family: 'Malaga RegItalic', 'Myriad Pro Regular', sans-serif;
+    line-height: 1.3;
+    color: #000;
+}
+
+.comment-one span {
+    font-size: 1rem;
+    font-family: 'Malaga RegItalic', 'Myriad Pro Regular', sans-serif;
+    line-height: 1.3;
+    color: #727272;
+}
+
+.slider-wrap .control {
+    position: relative;
+    bottom: 158px;
+    right: 54px;
+    grid-column: 2;
+}
+
+.slider-wrap label {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 11px;
+    margin: 11px;
+    width: 11px;
+    border-radius: 100%;
+    background-color: #b7b7b7;
+}
+
+#point1:checked~.control label:nth-of-type(1), #point2:checked~.control label:nth-of-type(2), #point3:checked~.control label:nth-of-type(3) {
+    height: 13px;
+    width: 13px;
+    background-color: #101010;
+}
+
+.download {
+    position: relative;
+    bottom: -57px;
+    padding-left: 70%;
+    grid-row: 2;
+    grid-column: 1/3;
+    align-self: center;
+}
+
+.download-content h3 {
+    position: relative;
+    bottom: 8px;
+    left: 39%;
+    width: 328px;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    text-align: end;
+    font-size: 2.25rem;
+    color: #535353;
+}
+
+.download-content p {
+    width: 436px;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: end;
+    letter-spacing: 0.1px;
+    line-height: 1.4;
+    color: #959393;
+}
+
+.download-link {
+    position: relative;
+    top: 30px;
+    display: grid;
+    padding-left: 25%;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 13px;
+}
+
+.donate {
+    grid-template-rows: 0.5fr 0.5fr 2.5fr;
+    grid-row: 3;
+    grid-column: 1/4;
+    padding-top: 10.7%;
+    justify-self: center;
+    align-self: center;
+}
+
+.donate .donate-text-first {
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+    line-height: 1;
+    color: #535353;
+}
+
+.donate .donate-text-second {
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 1.8rem;
+    word-spacing: 1px;
+    text-align: justify;
+    color: #7c7c7c;
+}
+
+.donate .donate-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.donate-button-container .upgrade-button {
+    position: relative;
+    left: 5%;
+    top: -21%;
+    padding: 15px;
+    display: block;
+    height: 57px;
+    width: 247px;
+    grid-column: 1;
+    justify-self: end;
+    text-align: center;
+    align-self: center;
+    border-radius: 31px;
+}
+
+.donate-button-container .donate-button {
+    position: relative;
+    left: -28%;
+    top: -20%;
+    padding: 10px;
+    display: block;
+    height: 53px;
+    width: 167px;
+    grid-column: 2;
+    justify-self: end;
+    text-align: center;
+    border-radius: 31px; 
+}
+
+.donate-button {
+    background: linear-gradient(to right, #35bbe0, #5e7bea);
+    -webkit-box-shadow: 0px 11px 15px -3px #61b7b6;
+    -moz-box-shadow: 0px 11px 15px -3px #61b7b6;
+    box-shadow: 0px 11px 15px -3px #61b7b6;
+}
+
+.upgrade-button {
+    background: linear-gradient(to right, #646c92, #5f2f6a);
+    -webkit-box-shadow: 0px 6px 24px 0px #6e7eb8;
+    -moz-box-shadow: 0px 6px 24px 0px #6e7eb8;
+    box-shadow: 0px 6px 24px 0px #6e7eb8;
+}
+
+.upgrade-button a {
+    color: #fff;
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-size: 1.1rem;
+}
+
+.upgrade-button a:hover {
+    color: #efd5fc;
+}
+
+.donate-button a:hover {
+    color: #0836eb;
+}
+
+.donate-button-container .donate-button a {
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+footer {
+    position: relative;
+    top: 28px;
+    display: grid;
+    grid-template-columns: 2.5fr 2fr 2fr;
+    grid-template-rows: 0.5fr 3fr 1fr 1fr;
+    background-color: #fefefe;
+}
+
+.top-text {
+    position: relative;
+    left: -5%;
+    bottom: 19%;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.9rem;
+    color: #afafaf;
+}
+
+.footer-navigation {
+    grid-row: 2;
+    grid-column: 1/3;
+    grid-template-columns: 0.5fr 2fr 2fr 1fr 1fr 1fr;
+}
+
+footer .support-company {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+    text-align: center;
+}
+
+.support-company::after {
+    content: '';
+    position: relative;
+    right: 339.5%;
+    bottom: 135px;
+    display: block;
+    height: 1px;
+    width: 1035%;
+    background: #b9b9b9;
+}
+
+.footer-navigation>div {
+    position: relative;
+    align-self: end;
+    justify-self: left;
+    text-align: right;
+}
+
+.footer-navigation .contact {
+    position: relative;
+    top: 44%;
+    padding-left: 32%;
+    grid-column: 2;
+    text-align: left;
+    align-self: center;
+}
+
+.footer-navigation .contact p {
+    font-size: 1rem;
+    color: #5c5c5c;
+}
+
+.horizontal-contact {
+    position: relative;
+    left: 208%;
+    top: 67%;
+    width: 1px;
+    height: 130px;
+    background-color: #b9b9b9;
+}
+
+.vertical-company {
+    position: absolute;
+    top: 3%;
+    left: 140%;
+    width: 1px;
+    height: 323px;
+    background-color: #b9b9b9;
+}
+
+.vertical-footer-navy {
+    position: relative;
+    left: 1464%;
+    bottom: 605%;
+    width: 1px;
+    height: 828%;
+    background-color: #b9b9b9;
+}
+
+.contact-conteiner {
+    padding-bottom: 11%;
+}
+
+.contact p>a {
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.9rem;
+    color: #5c5c5c;
+}
+
+.contact-conteiner li {
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.9rem;
+    color: #5c5c5c;
+}
+
+.contact-conteiner li a {
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.9rem;
+    color: #5c5c5c;
+}
+
+.contact-conteiner li a:hover {
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: #242323;
+}
+
+.contact-conteiner p a:hover {
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: #242323;
+}
+
+.nav-conteiner li>a {
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+    color: #5c5c5c;
+}
+
+.nav-conteiner li>a:hover {
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: #242323;
+}
+
+.company-navy {
+    top: 37%;
+    right: 7%;
+    grid-column: 4;
+}
+
+.company-navy h5 {
+    padding-bottom: 29%;
+}
+
+.legal-navy {
+    top: 37%;
+    right: 11%;
+}
+
+.legal-navy h5 {
+    padding-bottom: 15%;
+}
+
+.neutron-navy {
+    top: 36.5%;
+    left: 10%;
+}
+
+.neutron-navy h5 {
+    padding-bottom: 21%;
+}
+
+.footer-navigation>div h5 {
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-size: 1.1rem;
+    color: #5c5c5c;
+}
+
+.social-navy {
+    position: relative;
+    right: 3.5%;
+    top: 4%;
+    grid-row: 4;
+    grid-column: 1/3;
+    width: 620px;
+}
+
+.social-navy-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1.5fr) 2.5fr 1.5fr;
+    text-align: center
+}
+
+.social-navy-list>li a {
+    font-family: 'Titillium Web Regular', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.75rem;
+    color: #5c5c5c;
+}
+
+.social-navy-item:first-child {
+    padding-left: 251px;
+}
+
+.social-navy-list li+li:before {
+    content: "/";
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+.social-navy-list li a:hover {
+    color: #242323;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+.copyright {
+    position: relative;
+    left: 14%;
+    bottom: 4%;
+    grid-row: 4;
+    grid-column: 1/3;
+    align-self: center;
+    justify-self: start;
+}
+
+.copyright p {
+    text-align: end;
+    font-family: 'Titillium Web Bold', 'Myriad Pro Regular', sans-serif;
+    font-size: 0.75rem;
+    color: #5c5c5c;
+    word-spacing: 0.5px;
+}
