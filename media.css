@@ -551,6 +551,12 @@
 
 @media screen and (max-width: 620px) {
 
+    .security-privacy h3, .security-encryption h3, .security-email h3 {
+        font-size: 1.1rem;
+        padding-bottom: 2%;
+    }
+
+
     .navigation-item.signup-button a {
         top: 20%;
         left: -92%;
@@ -598,9 +604,6 @@
         font-size: 0.5rem;
     }
 
-    .security-privacy h3, .security-encryption h3, .security-email h3 {
-        font-size: 0.7rem;
-    }
 
 
     .navigation-item.signup-button a {
